@@ -1,0 +1,3 @@
+Instead of using the assertEqual(something, None) method, I could have used assertIsNone(something).
+
+Could have added more specific with the unit tests on the ratio. Instead of testing if the ratio was worked out correctly, I should have tested each case of the ratio (<1, >1, and exactly 1).

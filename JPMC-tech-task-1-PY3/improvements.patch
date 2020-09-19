@@ -1,0 +1,34 @@
+Index: client_test.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- client_test.py	(date 1600510361844)
++++ client_test.py	(date 1600510361844)
+@@ -42,7 +42,7 @@
+ 
+         price_a = (quotes[0]['top_ask']['price'] + quotes[0]['top_bid']['price']) / 2
+         price_b = (quotes[1]['top_ask']['price'] + quotes[1]['top_bid']['price']) / 2
+-        self.assertGreater(getRatio(price_a, price_b), price_a / price_b)
++        self.assertGreater(getRatio(price_a, price_b), 1)
+ 
+     def test_getRatio_calculateRatio_ratioLessThanOne(self):
+         quotes = [
+@@ -54,7 +54,7 @@
+ 
+         price_a = (quotes[0]['top_ask']['price'] + quotes[0]['top_bid']['price']) / 2
+         price_b = (quotes[1]['top_ask']['price'] + quotes[1]['top_bid']['price']) / 2
+-        self.assertLess(getRatio(price_a, price_b), price_a / price_b)
++        self.assertLess(getRatio(price_a, price_b), 1)
+ 
+     def test_getRatio_calculateRatio_ratioEqualsOne(self):
+         quotes = [
+@@ -66,7 +66,7 @@
+ 
+         price_a = (quotes[0]['top_ask']['price'] + quotes[0]['top_bid']['price']) / 2
+         price_b = (quotes[1]['top_ask']['price'] + quotes[1]['top_bid']['price']) / 2
+-        self.assertEqual(getRatio(price_a, price_b), price_a / price_b)
++        self.assertEqual(getRatio(price_a, price_b), 1)
+ 
+     def test_getRatio_calculateRatio_priceAEqualsZero(self):
+         quotes = [
